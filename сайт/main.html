@@ -11,29 +11,77 @@
 	
 	<!-- Это стиль текста: цвет, размер, шрифт -->
 	<style>
-    .btn {
-    display: inline-block;
-    background: #8C959D
-    color: #fff;
-    padding: 1rem 1.5rem
-    text-decoration: none;
-    border-radius: 7px;
-    transition: 0.5s;
-    }
-
-    .btn:hover {
-    background: #828264;
-    }
-	</style>
+		.btn {
+	   background-color: #35393d;
+	   border: none;
+	   color: white;
+	   padding: 10px 20px;
+	   text-align: center;
+	   text-decoration: none;
+	   display: inline-block;
+	   font-size: 16px;
+	   border-radius: 5px;
+	   margin: 10px 0;
+	   cursor: pointer;
+	 }
+	 .card-container {
+		 display: flex; /* Размещаем карточки в одну строку */
+		 justify-content: space-around; /* Равномерно распределяем карточки */
+		 flex-wrap: wrap; /* Оборачиваем карточки на новую строку, если не хватает места */
+	 }
+			 
+		 .card {
+			 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+			 transition: 0.3s;
+			 border-radius: 5px;
+			 width: 600px;
+			 margin: 20px auto;
+			 text-align: center;
+		 }
+		 
+		 .card:hover {
+		 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		 }
+	 
+		 .container {
+		 padding: 2px 16px;
+		 }
+	 </style>
 </head>
 
 <body>
 	<h1><a href="main.html">bookTopia</a></h1>
-	<div class="card">
-		<div class="container">
-		  <h2 class="title">Тестировщик ПО</h2>
-		  <p class="description">Отвечает за качество программного обеспечения. Его задача – убедиться, что продукт работает так, как задумано, и соответствует всем требованиям.
-			<form action="skills.html">
-			<button class="btn">Перейти к навыкам</button></p>
-	</div>
-</body>
+	<div class="card-container">
+		<div class="card">
+		  <div class="container">
+			<h4><b>Тестировщик ПО</b></h4>
+			<p>Отвечает за качество программного обеспечения. Его задача – убедиться, что продукт работает так, как задумано, и соответствует всем требованиям.</p>
+			<form action="skills.html" target="_blank">
+			  <button class="btn">Перейти к навыкам</button>
+			</form>
+		  </div>
+		</div>
+	  
+		<div class="card">
+		  <div class="container">
+			<h4><b>Ещё одна карточка</b></h4>
+			<p>Пример текста</p>
+			<form action="skills.html" target="_blank">
+			  <button class="btn">Перейти к навыкам</button>
+			</form>
+		  </div>
+		</div>
+	  
+		<div class="card">
+		  <div class="container">
+			<h4><b>Ещё одна карточка</b></h4>
+			<p>Пример текста</p>
+			<form action="skills.html" target="_blank">
+			  <button class="btn">Перейти к навыкам</button>
+			</form>
+		  </div>
+		</div>
+	  </div>
+	  
+	</body>
+</html>

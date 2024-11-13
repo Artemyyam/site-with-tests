@@ -10,52 +10,35 @@
 	<!-- Заголовок --> 
 	
 	<!-- Это стиль текста: цвет, размер, шрифт -->
+	<style type="text/css">
+		/*задаём общие параметры для всей страницы*/
+		body {
+		  text-align: left;
+		  margin: 10;
+		  font-family: Verdana, Arial, sans-serif;
+		  font-size: 20px;
+		}
+		.flex-container {
+		display: flex; /* Ключевое свойство */
+		}
 
-	<!-- Add shadows to create the "card" effect -->
-	<!-- On mouse-over, add a deeper shadow -->
-	<!-- Add some padding inside the card container -->
-	<style>
-    .btn {
-    display: inline-block;
-    background: #8C959D;
-    color: #fff;
-    padding: 1rem 1.5rem
-    text-decoration: none;
-    border-radius: 7px;
-    transition: 0.5s;
-    }
-
-    .btn:hover {
-    background: #828264;
-    }
-
-		
-    .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    }
-	
-    .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
-
-    .container {
-    padding: 2px 16px;
-    }
+		.flex-item {
+		margin: 10px; 
+		}
 	</style>
+
+	
 </head>
 
 <body>
 	<h1><a href="main.html">bookTopia</a></h1>
-	<div class="card">
-  		<div class="container">
-    			<h4><b>HTML-бред</b></h4>
-    			<p>Architect & Engineer</p>
-			<form action="test.html">
-			<button class="btn">Перейти к тесту</button>
-  		</div>
-	</div>
-
+	<h2>Тестировщик ПО</h2>
+	<p>Отвечает за качество программного обеспечения. Его задача – убедиться, что продукт работает так, как задумано, и соответствует всем требованиям.</p>
+	<h3>Требуемые навыки</h3>
+	<div class="flex-container">
+		<div class="flex-item">Элемент 1</div>
+		<div class="flex-item">Элемент 2</div>
+	  </div>
 	
 	<br>
 	<br>
