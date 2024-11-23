@@ -1,0 +1,1 @@
+Для запуска сайта нажмите Win + R, введите cmd, в командной строке введи mkdir myproject, затем cd myproject, затем py -3 -m venv .venv, затем .venv\Scripts\activate, затем pip install Flask, затем в выбраной программе для кодинга выберите находящийся в папке myproject... мне впадлу дальше писать
