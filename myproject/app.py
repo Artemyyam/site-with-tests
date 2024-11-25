@@ -8,6 +8,11 @@ def main():
     return render_template("main.html")
 
 
+@app.route("/error")
+def error():
+    return render_template("error.html")
+
+
 @app.route('/<string:profession>')
 def skills(profession):
     return render_template("skills.html")
@@ -16,6 +21,11 @@ def skills(profession):
 @app.route('/<string:profession>/<string:skills>')
 def test(profession, skills):
     return render_template("test.html")
+
+
+@app.route('/<string:profession>/<string:skills>/description')
+def description(profession, skills):
+    return render_template("skill-description.html")
 
 
 @app.route('/<string:profession>/<string:skills>/answer')
