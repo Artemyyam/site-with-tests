@@ -1,9 +1,14 @@
 <!DOCTYPE html>
+{% extends 'base.html' %}
 <html lang="ru">
-
+<div>
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 <head>
+	{% block title %}
 	<meta charset="utf-8">
-	<base target="_self"> <!-- Тип ссылки (открывает на той же странице) -->	
+	<base target="_self"> <!-- Тип ссылки (открывает на той же странице) -->
 	<title>bookTopia</title>
 	<!-- Заголовок --> 
 	
@@ -52,7 +57,7 @@
 		 }
 		#search-bar {
 	      float: right; /* справа */
-	      margin-top: -50px; /* Отступ от заголовка */
+	      margin-top: -45px; /* Отступ от заголовка */
 	      margin-right: 20px; /* Отступ от края */
 	    }
 
@@ -92,10 +97,12 @@
 
 
 	 </style>
+	{% endblock %}
 </head>
 
 <body>
-  <h1><a href="main.html">bookTopia</a></h1>
+{% block body %}
+	<h1><a href="/">bookTopia</a></h1>
   <!-- часть поиска начало -->
     <div id="search-bar">
       <input type="text" id="search-input" placeholder="Поиск...">
@@ -153,4 +160,6 @@
     });
 
   </script>
+{% endblock %}
+</div>
 </html>

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+{% extends 'base.html' %}
 <html lang="ru">
 
 <head>
+	{% block title %}
 	<meta charset="utf-8">
 
 	<base target="_self"> <!-- Тип ссылки (открывает на той же странице -->
@@ -59,10 +61,12 @@
 		 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 		 }
 	</style>
+	{% endblock %}
 </head>
 
 	<body>
-		<h1><a href="main.html">bookTopia</a></h1>
+	{% block body %}
+		<h1><a href="/">bookTopia</a></h1>
 		<!-- часть поиска начало -->
 	    <div id="search-bar">
 	      <input type="text" id="search-input" placeholder="Поиск...">
@@ -74,7 +78,7 @@
 		<h1>Итог теста:</h1>
 		<br>
 		
-		<form action="main.html">
+		<form action="/">
 			<button class="btn">На главную</button>
 	</body>
 	<script>
@@ -100,4 +104,5 @@
     });
 
   </script>
+{% endblock %}
 </html>
