@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-{% extends 'base.html' %}
 <html lang="ru">
 
 <head>
-	{% block title %}
 	<meta charset="utf-8">
 
 	<base target="_self"> <!-- Тип ссылки (открывает на той же странице -->
@@ -61,44 +59,47 @@
 		 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 		 }
 	</style>
-	{% endblock %}
 </head>
 
 	<body>
-	{% block body %}
-		<h1><a href="/">bookTopia</a></h1>
+		<h1><a href="main.html">bookTopia</a></h1>
+
 		<!-- часть поиска начало -->
 	    <div id="search-bar">
 	      <input type="text" id="search-input" placeholder="Поиск...">
 	      <button id="search-button">Найти</button>
 	    </div>
 	    <!-- часть поиска конец -->
-		<form>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<form id="question1Var1" action="http://pathserver">
 		<fieldset>
 	    <legend>Что такое "баг" в программном обеспечении?</legend>
 	     <div>
 	      	<input
 	        type="radio"
-	        id="question1Var1"
-	        name="question1"
-	        value="Die"
+	        name="question1Var1"
+	        value="a"
 	        checked />
 	      	<label for="question1Var1">a) Ошибка в коде, которая приводит к неправильной работе программы</label>
 		     <br>
 
-	      	<input type="radio" id="question1Var2" name="question1" value="Crush" />
+	      	<input type="radio" name="question1Var2" value="b" />
 	      	<label for="question1Var2"> b) Нежелательная функция, которую разработчики не планировали добавлять</label>
 		     <br>
 
-	      	<input type="radio" id="question1Var3" name="question1" value="Prepare myself" />
+	      	<input type="radio" name="question1Var3" value="c" />
 	      	<label for="question1Var3">c) Ошибка, которая не влияет на работу программы, но мешает пользователю</label>
 		     <br>
 		  
-	     	<input type="radio" id="question1Var4" name="question1" value="Creature of steel" />
-	      <label for="question1Var3">d) Все вышеперечисленное</label>
+	     	<input type="radio" name="question1Var4" value="d" />
+	      <label for="question1Var4">d) Все вышеперечисленное</label>
 	    </div>
 		</fieldset>
+		</form>
 		
+		<form>
 		<fieldset>
 		<legend>вопрос</legend>
 	    <div>
@@ -120,7 +121,9 @@
 	      <label for="question1Var3">ответ 4</label>
 	    </div>
 		</fieldset> 
+		</form>
 		
+		<form>
 		<fieldset>
 	    <legend>вопрос</legend>
 	    <div>
@@ -142,7 +145,9 @@
 	      <label for="question1Var3">ответ 4</label>
 	    </div>
 		</fieldset>
-			
+		</form>
+		
+		<form>
 		<fieldset>
 	    <legend>вопрос</legend>
 	    <div>
@@ -166,9 +171,7 @@
 		</fieldset>
 		</form>
 		
-		<form action="/profession>/skills>/answer">
-			<button type="submit" class="btn">К итогам</button></form>
-		<pre id="log"></pre>
+		<a href="/software tester/knowledge of OS/answer"><button class="btn">К итогам</button></a>
 	</body>
 	<script>
     // нажатие кнопки поиска
@@ -193,5 +196,4 @@
     });
 
   </script>
-{% endblock %}
 </html>
