@@ -1,14 +1,9 @@
 <!DOCTYPE html>
-{% extends 'base.html' %}
 <html lang="ru">
-<div>
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
+
 <head>
-	{% block title %}
 	<meta charset="utf-8">
-	<base target="_self"> <!-- Тип ссылки (открывает на той же странице) -->
+	<base target="_self"> <!-- Тип ссылки (открывает на той же странице) -->	
 	<title>bookTopia</title>
 	<!-- Заголовок --> 
 	
@@ -57,7 +52,7 @@
 		 }
 		#search-bar {
 	      float: right; /* справа */
-	      margin-top: -45px; /* Отступ от заголовка */
+	      margin-top: -50px; /* Отступ от заголовка */
 	      margin-right: 20px; /* Отступ от края */
 	    }
 
@@ -97,12 +92,10 @@
 
 
 	 </style>
-	{% endblock %}
 </head>
 
 <body>
-{% block body %}
-	<h1><a href="/">bookTopia</a></h1>
+  <h1><a href="/main">bookTopia</a></h1>
   <!-- часть поиска начало -->
     <div id="search-bar">
       <input type="text" id="search-input" placeholder="Поиск...">
@@ -115,7 +108,7 @@
 		  <div class="container">
 			<h4><b>Тестировщик ПО</b></h4>
 			<p>Отвечает за качество программного обеспечения. Его задача – убедиться, что продукт работает так, как задумано, и соответствует всем требованиям.</p>
-			<a href="/profession"><button class="btn">Перейти к навыкам</button></a>
+				<a href="/software tester"><button class="btn">Перейти к навыкам</button></a>
 		  </div>
 		</div>
 	  
@@ -123,7 +116,7 @@
 		  <div class="container">
 			<h4><b>Ещё одна карточка</b></h4>
 			<p>Пример текста</p>
-			<a href="/profession"><button class="btn">Перейти к навыкам</button></a>
+				<a href="/profession"><button class="btn">Перейти к навыкам</button></a>
 		  </div>
 		</div>
 	  
@@ -131,7 +124,7 @@
 		  <div class="container">
 			<h4><b>Ещё одна карточка</b></h4>
 			<p>Пример текста</p>
-			<a href="/profession"><button class="btn">Перейти к навыкам</button></a>
+				<a href="/profession"><button class="btn">Перейти к навыкам</button></a>
 		  </div>
 		</div>
 	  </div>
@@ -160,6 +153,4 @@
     });
 
   </script>
-{% endblock %}
-</div>
 </html>
