@@ -18,7 +18,7 @@ def skills(profession):
     return render_template("skills.html")
 
 
-@app.route('/<string:profession>/<string:skills>')
+@app.route('/<string:profession>/<string:skills>/description/test')
 def test(profession, skills):
     return render_template("test.html")
 
