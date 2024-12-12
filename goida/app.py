@@ -42,19 +42,20 @@ def main():
         test_r = request.form.get('test_r')
 
         a = 0
-        if profession != "": a = 1
+        if None != profession: a = 1
 
         article = Article(profession=profession, skills=skills, description=description, test=test, completed=completed, test_r=test_r)
 
         question = request.form.get('question')
         value = request.form.get('value')
 
-        question = Question(question=question, value=value)
+        questions = Question(question=question, value=value)
+
         try:
             if a == 1:
                 db.session.add(article)
             elif a == 0:
-                db.session.add(question)
+                db.session.add(questions)
             db.session.commit()
             return render_template("main.html")
         except:
