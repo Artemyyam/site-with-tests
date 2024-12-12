@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+
+	<base target="_self">
+	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
-
-    <title>Тест по компетенции</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbar-static/">
 
@@ -20,8 +22,8 @@
    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>S</text></svg>">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-	</head>
+	
+	<title>Тест по компетенции</title>
 
 	<style>
     	.btn{
@@ -43,9 +45,11 @@
     		background: #102863;
     }
 	</style>
+</head>
 
-	<body>
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
       <a class="navbar-brand" href="/">Skilltopia</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -53,7 +57,7 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/">О нас<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="https://t.me/StroiteliKodaSait">Оставить отзыв<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="">Профиль</a>
@@ -66,103 +70,79 @@
       </div>
     </nav>
 
-		<form>
+<main role="main" class="container">
+
+	<form action="/software_tester/knowledge_of_OS/answer" method="post"> <!-- /software_tester/knowledge_of_OS/answer -->
 		<fieldset>
-	    <legend>Что такое "баг" в программном обеспечении?</legend>
-	     <div>
-	      	<input
-	        type="radio"
-	        id="question1Var1"
-	        name="question1"
-	        value="Die"
-	        checked />
-	      	<label for="question1Var1">a) Ошибка в коде, которая приводит к неправильной работе программы</label>
-		     <br>
-
-	      	<input type="radio" id="question1Var2" name="question1" value="Crush" />
-	      	<label for="question1Var2"> b) Нежелательная функция, которую разработчики не планировали добавлять</label>
-		     <br>
-
-	      	<input type="radio" id="question1Var3" name="question1" value="Prepare myself" />
-	      	<label for="question1Var3">c) Ошибка, которая не влияет на работу программы, но мешает пользователю</label>
-		     <br>
-		  
-	     	<input type="radio" id="question1Var4" name="question1" value="Creature of steel" />
-	      <label for="question1Var3">d) Все вышеперечисленное</label>
+	    <legend>Какой тип тестирования обычно используется для проверки отдельных функций или методов программного кода?</legend>
+	    <div>
+			<input type="radio" name="q1" id="q1v1" value="0" />
+			<label for="q1v1">Итоговое тестирование</label>
+			<br>
+	      	<input type="radio" name="q1" id="q1v2" value="0" />
+	      	<label for="q1v2">Интеграционное тестирование</label>
+			<br>
+	      	<input type="radio" name="q1" id="q1v3" value="1" />
+	      	<label for="q1v3">Тестирование единиц</label>
+			<br>
+		  	<input type="radio" name="q1" id="q1v4" value="0" />
+	      	<label for="q1v4">Тестирование приёмки</label>
 	    </div>
 		</fieldset>
-		
+
 		<fieldset>
-		<legend>вопрос</legend>
+		<legend>Что является основной целью тестирования?</legend>
 	    <div>
-	      <input
-	        type="radio"
-	        id="question2Var1"
-	        name="question2"
-	        value="HAHAHAHAHA"
-	        checked />
-	          <label for="question2Var1">ответ 1</label>
-
-	      <input type="radio" id="question2Var2" name="question2" value="Crush" />
-	      <label for="question1Var2">ответ 2</label>
-
-	      <input type="radio" id="question2Var3" name="question2" value="Prepare myself" />
-	      <label for="question1Var3">ответ 3</label>
-		  
-		  <input type="radio" id="question2Var4" name="question2" value="Creature of steel" />
-	      <label for="question1Var3">ответ 4</label>
+			<input type="radio" name="q2" id="q2v1" value="0" />
+			<label for="q2v1">Проверка функциональности программного кода</label>
+			<br>
+	      	<input type="radio" name="q2" id="q2v2" value="0" />
+	      	<label for="q2v2">Проверка безопасности программного кода</label>
+			<br>
+	      	<input type="radio" name="q2" id="q2v3" value="0" />
+	      	<label for="q2v3">Проверка правильности программного кода</label>
+			<br>
+		  	<input type="radio" name="q2" id="q2v4" value="1" />
+	      	<label for="q2v4">Выявление ошибок в программном коде</label>
 	    </div>
+		</fieldset> 
+
+		<fieldset>
+			<legend>Что является основным преимуществом использования автоматизированных тестов?</legend>
+			<div>
+				<input type="radio" name="q3" id="q3v1" value="0" />
+				<label for="q3v1">Сокращение времени тестирования</label>
+				<br>
+	      		<input type="radio" name="q3" id="q3v2" value="1" />
+	      		<label for="q3v2">Повышение качества программного кода</label>
+				<br>
+	      		<input type="radio" name="q3" id="q3v3" value="0" />
+	      		<label for="q3v3">Уменьшение затрат на тестирование</label>
+				<br>
+		  		<input type="radio" name="q3" id="q3v4" value="0" />
+	      		<label for="q3v4">Увеличение производительности тестирования</label>
+			</div>
 		</fieldset> 
 		
 		<fieldset>
-	    <legend>вопрос</legend>
-	    <div>
-	      <input
-	        type="radio"
-	        id="question3Var1"
-	        name="question3"
-	        value="Die"
-	        checked />
-	          <label for="question2Var1">ответ 1</label>
-
-	      <input type="radio" id="question2Var2" name="question2" value="Crush" />
-	      <label for="question1Var2">ответ 2</label>
-
-	      <input type="radio" id="question2Var3" name="question2" value="Prepare myself" />
-	      <label for="question1Var3">ответ 3</label>
-		  
-		  <input type="radio" id="question2Var4" name="question2" value="Creature of steel" />
-	      <label for="question1Var3">ответ 4</label>
-	    </div>
+			<legend>Что представляет собой тестовое сценарий?</legend>
+			<div>
+				<input type="radio" name="q4" id="q4v1" value="1" />
+				<label for="q4v1">План проверки программного кода</label>
+				<br>
+	      		<input type="radio" name="q4" id="q4v2" value="0" />
+	      		<label for="q4v2">Список задач для тестирования</label>
+				<br>
+	      		<input type="radio" name="q4" id="q4v3" value="0" />
+	      		<label for="q4v3">Документация по тестированию</label>
+				<br>
+		  		<input type="radio" name="q4" id="q4v4" value="0" />
+	      		<label for="q4v4">Протокол тестирования</label>
+			</div>
 		</fieldset>
-			
-		<fieldset>
-	    <legend>вопрос</legend>
-	    <div>
-	      <input
-	        type="radio"
-	        id="question4Var1"
-	        name="question4"
-	        value="Die"
-	        checked />
-	           <label for="question2Var1">ответ 1</label>
-
-	      <input type="radio" id="question2Var2" name="question2" value="Crush" />
-	      <label for="question1Var2">ответ 2</label>
-
-	      <input type="radio" id="question2Var3" name="question2" value="Prepare myself" />
-	      <label for="question1Var3">ответ 3</label>
-		  
-		  <input type="radio" id="question2Var4" name="question2" value="Creature of steel" />
-	      <label for="question1Var3">ответ 4</label>
-	    </div>
-		</fieldset>
-		</form>
-		
-		<form action="/<string:profession>/<string:skills>/answer">
-			<button type="submit" class="btn">К итогам »</button></form>
-		<pre id="log"></pre>
-
+		<input type="submit" class="btn" value="К итогам"></a>
+	</form>
+</main>
 	</body>
 
 </html>
