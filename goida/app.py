@@ -20,8 +20,10 @@ class Article(db.Model):
 
 class Question(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    question = db.Column(db.Text, nullable=False)
-    value = db.Column(db.Boolean, default=0)
+    q1 = db.Column(db.Integer)
+    q2 = db.Column(db.Integer)
+    q3 = db.Column(db.Integer)
+    q4 = db.Column(db.Integer)
 
     def __repr__(self):
         return '<Question %r>' % self.id
@@ -46,10 +48,13 @@ def main():
 
         article = Article(profession=profession, skills=skills, description=description, test=test, completed=completed, test_r=test_r)
 
-        question = request.form.get('question')
+        q1 = request.form.get('q1')
+        q2 = request.form.get('q2')
+        q3 = request.form.get('q3')
+        q4 = request.form.get('q4')
         value = request.form.get('value')
 
-        questions = Question(question=question, value=value)
+        questions = Question(q1=q1, q2=q2, q3=q3, q4=q4, value=value)
 
         try:
             if a == 1:
@@ -75,10 +80,12 @@ def create():
 
         article = Article(profession=profession, skills=skills, description=description, test=test, completed=completed, test_r=test_r)
 
-        question = request.form.get('question')
-        value = request.form.get('value')
+        q1 = request.form.get('q1')
+        q2 = request.form.get('q2')
+        q3 = request.form.get('q3')
+        q4 = request.form.get('q4')
 
-        question = Question(question=question, value=value)
+        question = Question(q1=q1, q2=q2, q3=q3, q4=q4)
         try:
             if article != 0: db.session.add(article)
             else: db.session.add(question)
@@ -102,23 +109,24 @@ def test_forward():
 @app.route("/software_tester/knowledge_of_OS/answer", methods=['POST', 'GET'])
 def answer():
     if request.method == "POST":
-        profession = request.form['profession']
-        skills = request.form['skills']
-        description = request.form['description']
-        test = request.form['test']
-        completed = request.form['completed']
-        test_r = request.form['test_r']
+        q1 = request.form.get('q1')
+        q2 = request.form.get('q2')
+        q3 = request.form.get('q3')
+        q4 = request.form.get('q4')
 
-        article = Article(profession=profession, skills=skills, description=description, test=test, completed=completed, test_r=test_r)
+        question = Question(q1=q1, q2=q2, q3=q3, q4=q4)
 
         try:
-            db.session.add(article)
+            db.session.add(question)
+            print(question)
             db.session.commit()
-            return render_template("answer.html", article = Article(profession=profession, skills=skills, description=description, test=test, completed=completed, test_r=test_r))
+            print(q1, q2, q3, q4)
+            return redirect("/software_tester/knowledge_of_OS/answer") #"/software_tester/knowledge_of_OS/answer"
         except:
             return "При выполнении теста произошла ошибка"
     else:
-        return render_template("answer.html")
+        questions = Question.query.all()
+        return render_template("answer.html", questions=questions)
 
 if __name__ == "__main__":
     app.run(debug=True)
