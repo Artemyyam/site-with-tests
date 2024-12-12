@@ -71,17 +71,9 @@
 	    <!-- часть поиска конец -->
 
 		<br>
-		<h1>Итог теста:</h1> {{articles[0].test_r}}
+		<h1>Итог теста:</h1> {{ questions[0].q1 + questions[0].q2 + questions[0].q3 + questions[0].q4}} / 4
 		<br>
 		
-		<!-- {% for el in articles %}
-		<div class="alert alert-info" >
-			<h2>{{ el.Profession }}</h2>
-			<p>{{ el.Skills }}</p>
-			<p>{{ el.Description }}</p>
-		</div>
-		{% endfor %} -->
-
 		<a href="/"><button class="btn">На главную</button></a>
 	</body>
 	<script>
