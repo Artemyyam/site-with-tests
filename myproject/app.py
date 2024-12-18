@@ -6,7 +6,7 @@ app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///base.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-class Article(db.Model):
+class Texttest(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     profession = db.Column(db.Text, nullable=False)
     skills = db.Column(db.Text, nullable=False)
@@ -16,7 +16,23 @@ class Article(db.Model):
     test_r = db.Column(db.Text, default=0)
 
     def __repr__(self):
-        return '<Article %r>' % self.id
+        return '<Texttest %r>' % self.id
+
+class Association(db.Model):
+    text_id = db.Column(db.Integer, primary_key=True)
+    mtest_id = db.Column(db.Integer)
+
+    def __repr__(self):
+        return '<Association %r>' % self.id
+
+class Mtest(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    category = db.Column(db.Text, nullable=False)
+    question = db.Column(db.Text, nullable=False)
+    answer = db.Column(db.Text, nullable=False)
+
+    def __repr__(self):
+        return '<Mtest %r>' % self.id
 
 class Question(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -46,7 +62,7 @@ def main():
         a = 0
         if None != profession: a = 1
 
-        article = Article(profession=profession, skills=skills, description=description, test=test, completed=completed, test_r=test_r)
+        text = Texttest(profession=profession, skills=skills, description=description, test=test, completed=completed, test_r=test_r)
 
         q1 = request.form.get('q1')
         q2 = request.form.get('q2')
@@ -58,7 +74,7 @@ def main():
 
         try:
             if a == 1:
-                db.session.add(article)
+                db.session.add(text)
             elif a == 0:
                 db.session.add(questions)
             db.session.commit()
@@ -78,7 +94,7 @@ def create():
         completed = request.form.get('completed')
         test_r = request.form.get('test_r')
 
-        article = Article(profession=profession, skills=skills, description=description, test=test, completed=completed, test_r=test_r)
+        text = Texttest(profession=profession, skills=skills, description=description, test=test, completed=completed, test_r=test_r)
 
         q1 = request.form.get('q1')
         q2 = request.form.get('q2')
@@ -87,7 +103,7 @@ def create():
 
         question = Question(q1=q1, q2=q2, q3=q3, q4=q4)
         try:
-            if article != 0: db.session.add(article)
+            if text != 0: db.session.add(text)
             else: db.session.add(question)
             db.session.commit()
             return redirect('/')
@@ -102,13 +118,13 @@ def description():
 
 @app.route("/software_tester", methods=['POST', 'GET'])
 def skills():
-    articles = Article.query.all()
-    return render_template("skills.html", articles=articles)
+    text = Texttest.query.all()
+    return render_template("skills.html", text=text)
 
 @app.route("/software_tester/knowledge_of_OS", methods=['POST', 'GET'])
 def test_forward():
-    articles = Article.query.all()
-    return render_template("test.html", articles=articles)
+    text = Texttest.query.all()
+    return render_template("test.html", text=text)
 
 @app.route("/software_tester/knowledge_of_OS/answer", methods=['POST', 'GET'])
 def answer():
