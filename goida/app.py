@@ -84,6 +84,35 @@ def create():
 def description():
     return render_template("skill-description.html")
 
+@app.route('/software_tester2/description2')
+def description2():
+    return render_template("skill-description2.html")
+
+
+@app.route('/software_tester3/description3')
+def description3():
+    return render_template("skill-description3.html")
+
+
+@app.route('/software_tester2/DevOps-Engineer')
+def test2():
+    return render_template("test2.html")
+
+
+@app.route('/software_tester3/Data-Analyst')
+def test3():
+    return render_template("test3.html")
+
+
+@app.route('/software_tester2/')
+def skills2():
+    return render_template("skills2.html")
+
+
+@app.route('/software_tester3/')
+def skills3():
+    return render_template("skills3.html")
+
 @app.route("/software_tester", methods=['POST', 'GET'])
 def skills():
     text = Main.query.all()
