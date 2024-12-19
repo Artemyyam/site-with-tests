@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+
+	<base target="_self">
+	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbar-static/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="./skill-description_files/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./skill-description_files/navbar-top.css" rel="stylesheet">
+   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>S</text></svg>">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<title>Тест по компетенции</title>
+
+	<style>
+    	.btn{
+	background-color: #35393d;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 5px;
+	margin: 10px 0;
+	cursor: pointer;
+	transition: 0.5s;
+	}
+
+    	.btn:hover {
+    		background: #102863;
+    }
+	</style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <a class="navbar-brand" href="/">Skilltopia</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="https://t.me/StroiteliKodaSait">Оставить отзыв<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Профиль</a>
+          </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="" aria-label="Search" wfd-id="id0">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+<main role="main" class="container">
+
+	<form action="/software_tester/knowledge_of_OS/answer" onsubmit="getResult()" method="post"> <!-- /software_tester/knowledge_of_OS/answer -->
+		<fieldset>
+	    <legend>Какой системный инструмент используется для мониторинга и анализа системных ресурсов в реальном времени, с использованием алгоритмов машинного обучения для предсказания будущих тенденций?</legend>
+	    <div>
+			<input type="radio" name="q1" id="q1v1" value="0" />
+			<label for="q1v1">Prometheus</label>
+			<br>
+	      	<input type="radio" name="q1" id="q1v2" value="0" />
+	      	<label for="q1v2">Grafana</label>
+			<br>
+	      	<input type="radio" name="q1" id="q1v3" value="1" />
+	      	<label for="q1v3">InfluxDB</label>
+			<br>
+		  	<input type="radio" name="q1" id="q1v4" value="0" />
+	      	<label for="q1v4">ELK Stack с использованием алгоритмов машинного обучения</label>
+	    </div>
+		</fieldset>
+
+		<fieldset>
+		<legend>Какой системный инструмент используется для конфигурирования и управления инфраструктурой системы на основе DevOps-честности, с использованием технологий Infrastructure as Code (IaC) и Continuous Integration/Continuous Deployment (CI/CD)?</legend>
+	    <div>
+			<input type="radio" name="q2" id="q2v1" value="0" />
+			<label for="q2v1">Ansible</label>
+			<br>
+	      	<input type="radio" name="q2" id="q2v2" value="0" />
+	      	<label for="q2v2">Puppet</label>
+			<br>
+	      	<input type="radio" name="q2" id="q2v3" value="0" />
+	      	<label for="q2v3">Chef</label>
+			<br>
+		  	<input type="radio" name="q2" id="q2v4" value="1" />
+	      	<label for="q2v4">Terraform с использованием GitLab CI/CD</label>
+	    </div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Какой системный инструмент используется для анализа и устранения проблем с безопасности системы на основе данных о логах и системных данных, с использованием технологий Machine Learning и Artificial Intelligence?</legend>
+			<div>
+				<input type="radio" name="q3" id="q3v1" value="0" />
+				<label for="q3v1">ELK Stack</label>
+				<br>
+	      		<input type="radio" name="q3" id="q3v2" value="1" />
+	      		<label for="q3v2">Splunk</label>
+				<br>
+	      		<input type="radio" name="q3" id="q3v3" value="0" />
+	      		<label for="q3v3">Sumo Logic</label>
+				<br>
+		  		<input type="radio" name="q3" id="q3v4" value="0" />
+	      		<label for="q3v4">ELK Stack с использованием технологий Machine Learning и Artificial Intelligence</label>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Какой системный инструмент используется для мониторинга и анализа производительности системных ресурсов на основе данных о системном Time Series, с использованием алгоритмов статистического анализа для выявления аномалий и предсказания будущих тенденций?</legend>
+			<div>
+				<input type="radio" name="q4" id="q4v1" value="1" />
+				<label for="q4v1">InfluxDB</label>
+				<br>
+	      		<input type="radio" name="q4" id="q4v2" value="0" />
+	      		<label for="q4v2">Grafana</label>
+				<br>
+	      		<input type="radio" name="q4" id="q4v3" value="0" />
+	      		<label for="q4v3">Prometheus</label>
+				<br>
+		  		<input type="radio" name="q4" id="q4v4" value="0" />
+	      		<label for="q4v4">ELK Stack с использованием алгоритмов статистического анализа</label>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Какой системный инструмент используется для создания и управления виртуальными средами и хост-чеймерами, с использованием технологий Virtualization и Containers для повышения масштабируемости и надёжности?</legend>
+			<div>
+				<input type="radio" name="q5" id="q5v1" value="1" />
+				<label for="q5v1">VirtualBox</label>
+				<br>
+	      		<input type="radio" name="q5" id="q5v2" value="0" />
+	      		<label for="q4v2">VMware</label>
+				<br>
+	      		<input type="radio" name="q5" id="q5v3" value="0" />
+	      		<label for="q5v3">KVM</label>
+				<br>
+		  		<input type="radio" name="q5" id="q5v4" value="0" />
+	      		<label for="q5v4">Docker с использованием Kubernetes</label>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Какой системный инструмент используется для конфигурирования и управления сетевыми подключениями и роутерами, с использованием технологий Network as Code (NaC) и Continuous Integration/Continuous Deployment (CI/CD)?</legend>
+			<div>
+				<input type="radio" name="q6" id="q6v1" value="1" />
+				<label for="q6v1">netcfg</label>
+				<br>
+	      		<input type="radio" name="q6" id="q6v2" value="0" />
+	      		<label for="q6v2">ip addr</label>
+				<br>
+	      		<input type="radio" name="q6" id="q6v3" value="0" />
+	      		<label for="q6v3">ip route</label>
+				<br>
+		  		<input type="radio" name="q6" id="q6v4" value="0" />
+	      		<label for="q6v4">Ansible с использованием GitLab CI/CD</label>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Какой системный инструмент используется для мониторинга и анализа системных данных на основе данных о системном Performance Metrics, с использованием алгоритмов машинного обучения для предсказания будущих тенденций?</legend>
+			<div>
+				<input type="radio" name="q7" id="q7v1" value="1" />
+				<label for="q7v1">sar</label>
+				<br>
+	      		<input type="radio" name="q7" id="q7v2" value="0" />
+	      		<label for="q7v2">mpstat</label>
+				<br>
+	      		<input type="radio" name="q4" id="q7v3" value="0" />
+	      		<label for="q7v3">iostat</label>
+				<br>
+		  		<input type="radio" name="q4" id="q7v4" value="0" />
+	      		<label for="q7v4">sysstat с использованием алгоритмов машинного обучения</label>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Какой системный инструмент используется для создания и управления автоматическими скриптами и заданиями на основе данных о системном Cron Tab, с использованием технологий Serverless Computing и Function-as-a-Service (FaaS)?</legend>
+			<div>
+				<input type="radio" name="q8" id="q8v1" value="1" />
+				<label for="q8v1">cron</label>
+				<br>
+	      		<input type="radio" name="q8" id="q8v2" value="0" />
+	      		<label for="q8v2">anacron</label>
+				<br>
+	      		<input type="radio" name="q8" id="q8v3" value="0" />
+	      		<label for="q8v3">systemd.timer</label>
+				<br>
+		  		<input type="radio" name="q8" id="q8v4" value="0" />
+	      		<label for="q8v4">AWS Lambda с использованием systemd.timer</label>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Какой системный инструмент используется для мониторинга и анализа системных данных на основе данных о системном Event-Driven Metrics, с использованием технологий Machine Learning и Artificial Intelligence?</legend>
+			<div>
+				<input type="radio" name="q9" id="q9v1" value="1" />
+				<label for="q9v1">ELK Stack</label>
+				<br>
+	      		<input type="radio" name="q9" id="q9v2" value="0" />
+	      		<label for="q4v2">Prometheus</label>
+				<br>
+	      		<input type="radio" name="q9" id="q9v3" value="0" />
+	      		<label for="q9v3">Grafana</label>
+				<br>
+		  		<input type="radio" name="q9" id="q9v4" value="0" />
+	      		<label for="q9v4">ELK Stack с использованием технологий Machine Learning и Artificial Intelligence</label>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Какой системный инструмент используется для конфигурирования и управления системами на основе DevOps-честности, с использованием технологий Infrastructure as Code (IaC) и Continuous Integration/Continuous Deployment (CI/CD)?</legend>
+			<div>
+				<input type="radio" name="q10" id="q10v1" value="1" />
+				<label for="q10v1">Ansible</label>
+				<br>
+	      		<input type="radio" name="q10" id="q10v2" value="0" />
+	      		<label for="q10v2">Puppet</label>
+				<br>
+	      		<input type="radio" name="q10" id="q10v3" value="0" />
+	      		<label for="q10v3">Chef</label>
+				<br>
+		  		<input type="radio" name="q10" id="q10v4" value="0" />
+	      		<label for="q10v4">Terraform с использованием GitLab CI/CD</label>
+			</div>
+		</fieldset>
+
+		<div id="result"></div>
+		<script type="text/javascript">
+			function getResult() {
+				var test_r = "";
+				var q1s = document.getElementsByName("q1");
+				for (i = 0; i < q1s.length; i++) {
+					if (q1s[i].checked) {
+						test_r = test_r + q1s[i].value;
+					}
+				}
+				var q2s = document.getElementsByName("q2");
+				for (i = 0; i < q2s.length; i++) {
+					if (q2s[i].checked) {
+						test_r = test_r + q2s[i].value;
+					}
+				}
+				var q3s = document.getElementsByName("q3");
+				for (i = 0; i < q3s.length; i++) {
+					if (q3s[i].checked) {
+						test_r = test_r + q3s[i].value;
+					}
+				}
+				var q4s = document.getElementsByName("q4");
+				for (i = 0; i < q4s.length; i++) {
+					if (q4s[i].checked) {
+						test_r = test_r + q4s[i].value;
+					}
+				}
+				var q5s = document.getElementsByName("q5");
+				for (i = 0; i < q5s.length; i++) {
+					if (q5s[i].checked) {
+						test_r = test_r + q5s[i].value;
+					}
+				}
+				var q6s = document.getElementsByName("q6");
+				for (i = 0; i < q6s.length; i++) {
+					if (q6s[i].checked) {
+						test_r = test_r + q6s[i].value;
+					}
+				}
+				var q7s = document.getElementsByName("q7");
+				for (i = 0; i < q7s.length; i++) {
+					if (q7s[i].checked) {
+						test_r = test_r + q7s[i].value;
+					}
+				}
+				var q8s = document.getElementsByName("q8");
+				for (i = 0; i < q8s.length; i++) {
+					if (q8s[i].checked) {
+						test_r = test_r + q8s[i].value;
+					}
+				}
+				var q9s = document.getElementsByName("q9");
+				for (i = 0; i < q9s.length; i++) {
+					if (q9s[i].checked) {
+						test_r = test_r + q9s[i].value;
+					}
+				}
+				var q10s = document.getElementsByName("q10");
+				for (i = 0; i < q10s.length; i++) {
+					if (q10s[i].checked) {
+						test_r = test_r + q10s[i].value;
+					}
+				}
+				document.getElementById("result").innerHTML = sum
+				document.getElementById("test_r") = test_r
+			}
+  		</script>
+		<input type="hidden" id="test_r">
+		<input type="submit" class="btn" value="К итогам">
+		<!-- <input type="button" onclick="getResult()" value="Тык"> -->
+	</form>
+</main>
+	</body>
+
+</html>
